@@ -12,6 +12,8 @@ from datetime import datetime, timezone
 from email.message import EmailMessage
 from pathlib import Path
 
+import anthropic
+
 from .drafter import ClaudeDrafter, MockDrafter, validate
 from .models import Draft, Meeting
 from .pipeline import run
@@ -158,6 +160,10 @@ def main(argv: list[str] | None = None) -> int:
         return a.fn(a)
     except (KeyError, ValueError) as err:
         print(f"error: {err}", file=sys.stderr)
+        return 2
+    except anthropic.AuthenticationError:
+        print("error: the Anthropic API rejected the key. Set a valid ANTHROPIC_API_KEY, "
+              "or use --llm mock (no key needed).", file=sys.stderr)
         return 2
 
 
