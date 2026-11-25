@@ -1,0 +1,10 @@
+{
+  "_note": "FICTIONAL SAMPLE DATA. Activities logged after meetings. Meetings themselves are added as activities by the loader.",
+  "activities": [
+    {"id": "A-1", "type": "email", "owner_id": "o-2", "timestamp": "2026-11-12T10:00:00+00:00", "deal_id": "D-2", "contact_email": "omar.haddad@example.com"},
+    {"id": "A-2", "type": "email", "owner_id": "o-1", "timestamp": "2026-11-13T09:00:00+00:00", "deal_id": "D-3", "contact_email": "hannah.weiss@example.com"},
+    {"id": "A-3", "type": "note", "owner_id": "o-1", "timestamp": "2026-11-14T11:00:00+00:00", "deal_id": "D-4"},
+    {"id": "A-4", "type": "email", "owner_id": "o-1", "timestamp": "2026-11-12T08:00:00+00:00", "deal_id": "D-4", "contact_email": "tom.alvarez@example.com"},
+    {"id": "A-5", "type": "call", "owner_id": "o-2", "timestamp": "2026-11-15T15:00:00+00:00", "contact_email": "sofia.marin@example.com"}
+  ]
+}
